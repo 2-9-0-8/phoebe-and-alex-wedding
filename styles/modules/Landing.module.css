@@ -1,0 +1,23 @@
+.landing {
+  block-size: 100vb;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: var(--space-10x) 0;
+}
+
+.landing__message {
+  --landing-message-font-size: 1rem;
+
+  @media (--viewport-smallest+) {
+    --landing-message-font-size: 1.25rem;
+  }
+
+  @media (--viewport-medium+) {
+    --landing-message-font-size: 1.8rem;
+  }
+
+  font-size: var(--landing-message-font-size);
+  text-align: center;
+}

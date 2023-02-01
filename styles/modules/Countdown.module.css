@@ -1,0 +1,43 @@
+.countdown {
+  --countdown-list-gap: var(--space-4x);
+
+  @media (--viewport-small+) {
+    --countdown-list-gap: var(--space-8x);
+  }
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3x);
+}
+
+.countdown__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--countdown-list-gap);
+  list-style: none;
+  justify-content: space-between;
+  overflow-y: auto;
+}
+
+.countdown__message {
+  text-align: center;
+}
+
+.display {
+  --display-basis: calc(50% - var(--countdown-list-gap));
+
+  @media (--viewport-small+) {
+    --display-basis: auto;
+  }
+
+  flex-basis: var(--display-basis);
+
+  > span {
+    display: block;
+    text-align: center;
+
+    &:last-child {
+      font-style: italic;
+    }
+  }
+}

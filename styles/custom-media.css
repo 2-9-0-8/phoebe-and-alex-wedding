@@ -1,0 +1,14 @@
+@custom-media --viewport-smallest+ (width >= 410px);
+@custom-media --viewport-small+ (width >= 480px);
+@custom-media --viewport-medium+ (width >= 720px);
+@custom-media --viewport-large+ (width >= 1024px);
+@custom-media --viewport-larger+ (width >= 1440px);
+@custom-media --viewport-largest+ (width >= 1920px);
+
+
+@custom-media --viewport-smallest- (width < 410px);
+@custom-media --viewport-small- (width < 480px);
+@custom-media --viewport-medium- (width < 720px);
+@custom-media --viewport-large- (width < 1024px);
+@custom-media --viewport-larger- (width < 1440px);
+@custom-media --viewport-largest- (width < 1920px);

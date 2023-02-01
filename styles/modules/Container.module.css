@@ -1,0 +1,9 @@
+.container {
+  --container-padding-inline: var(--space-8x);
+  --container-padding: 0 var(--space-8x);
+
+  inline-size: 100%;
+  margin-inline: auto;
+  max-inline-size: calc(65ch + (var(--container-padding-inline) * 2));
+  padding: var(--container-padding);
+}

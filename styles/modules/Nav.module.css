@@ -1,0 +1,30 @@
+.nav {
+  --nav-gap: var(--space-4x);
+
+  @media (--viewport-small+) {
+    --nav-gap: var(--space-10x);
+  }
+
+  align-items: baseline;
+  display: flex;
+  gap: var(--nav-gap);
+  justify-content: center;
+  margin: var(--space-10x) 0 var(--space-16x) 0;
+
+  > li {
+    flex-basis: fit-content;
+  }
+}
+
+.nav__item {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+
+  &[aria-current=page][data-underline] {
+
+    &::after {
+      opacity: 1;
+    }
+  }
+}

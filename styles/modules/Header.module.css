@@ -1,0 +1,28 @@
+.header-container {
+  backdrop-filter: blur(10px);
+  background-color: var(--grey-d4-a9);
+
+  &[data-variant=home] {
+
+    @media (--viewport-medium+) {
+      --data-frame-child-column: 1 / span 3;
+    }
+  }
+}
+
+.header {
+  --header-block: var(--space-12x);
+
+  @media (--viewport-medium+) {
+    --header-block: var(--space-20x);
+  }
+
+  align-items: center;
+  block-size: var(--header-block);
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 1.125rem;
+}

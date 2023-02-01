@@ -1,0 +1,9 @@
+.floral-separator {
+  display: block;
+  margin: var(--space-8x) auto;
+  max-inline-size: 300px;
+
+  > path {
+    fill: var(--floral-separator-color, var(--taupe));
+  }
+}
