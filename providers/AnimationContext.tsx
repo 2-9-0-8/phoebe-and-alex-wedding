@@ -19,11 +19,13 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
   const targets = useRef<HTMLElement[]>([])
   const location = usePathname()
   const [observerActivated, setObserverActivated] = useState<number>(0)
+  let observer: IntersectionObserver | null
 
   const handleAnimation = (target: HTMLElement, index: number) => {
     const DELAY_MULTIPLIER = 150
     const delay = index * DELAY_MULTIPLIER
     const duration = parseFloat(window.getComputedStyle(target).getPropertyValue('--duration'))
+    const style = target.getAttribute('style')
 
     target.style.setProperty('--delay', delay + 'ms')
     target.dataset.animating = ''
@@ -31,12 +33,18 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
     setTimeout(() => {
       delete target.dataset.animate
       delete target.dataset.animating
+
+      style ? target.setAttribute('style', style) : target.removeAttribute('style')
     }, delay + duration)
   }
 
   const callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry, index) => {
-      if (entry.isIntersecting) handleAnimation(entry.target as HTMLElement, index)
+      if (entry.isIntersecting) {
+        handleAnimation(entry.target as HTMLElement, index)
+
+        observer?.unobserve(entry.target)
+      }
     })
   }
 
@@ -51,14 +59,15 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
   }
 
   useEffect(() => {
-    const observer = new IntersectionObserver(callback, options)
     const elements = [...document.querySelectorAll<HTMLElement>('[data-animate')]
 
+    observer = new IntersectionObserver(callback, options)
+
     elements.map(element => targets.current.push(element))
-    targets?.current.map((target: HTMLElement) => observer.observe(target))
+    targets?.current.map((target: HTMLElement) => observer?.observe(target))
 
     return () => {
-      targets?.current.map((target: HTMLElement) => observer.unobserve(target))
+      targets?.current.map((target: HTMLElement) => observer?.unobserve(target))
     }
   }, [location, observerActivated])
 

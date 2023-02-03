@@ -168,6 +168,11 @@ export default function ResponseForm() {
 
                   <div className={styles['response__group']} data-animate>
                     <label>
+                      Meat 
+                      <Field name="food" type="radio" value="Meat" disabled={values.rsvp !== 'Attending'} />
+                    </label>
+                    
+                    <label>
                       Vegetarian
                       <Field name="food" type="radio" value="Vegetarian" disabled={values.rsvp !== 'Attending'} />
                     </label>
