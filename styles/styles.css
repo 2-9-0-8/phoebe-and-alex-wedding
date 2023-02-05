@@ -47,6 +47,15 @@
   --space-46x-negative: calc(-46 * var(--space));
   --space-48x-negative: calc(-48 * var(--space));
   --space-64x-negative: calc(-64 * var(--space));
+
+  --stack-order-underworld: -1;
+  --stack-order-lowest: 1;
+  --stack-order-lower: 10;
+  --stack-order-low: 25;
+  --stack-order-medium: 50;
+  --stack-order-high: 100;
+  --stack-order-higher: 500;
+  --stack-order-highest: 1000;
 }
 
 body {

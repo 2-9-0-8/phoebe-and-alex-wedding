@@ -1,0 +1,7 @@
+.sunflower {
+  inset: 0 0 auto auto;
+  position: fixed;
+  object-fit: cover;
+  opacity: 0.2;
+  z-index: var(--stack-order-underworld);
+}
