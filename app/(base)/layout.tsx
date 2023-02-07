@@ -10,7 +10,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <Sunflower />
       <Container>
         <Nav />
-        <FloralSeparator />
       </Container>
 
       <main>{children}</main>

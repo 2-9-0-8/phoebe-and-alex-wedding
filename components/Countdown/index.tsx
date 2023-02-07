@@ -24,7 +24,6 @@ export default function Countdown() {
         <Display value={minutes} type="Minutes" />
         <Display value={seconds} type="Seconds" />
       </ol>
-      <FloralSeparator />
       <p className={styles['countdown__message']}>&#128112; We hope to see you soon &#129333;</p>
     </div>
   )

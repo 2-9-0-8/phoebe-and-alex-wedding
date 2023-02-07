@@ -88,46 +88,23 @@ main {
 }
 
 [data-underline] {
-  position: relative;
-
-  &::after {
-    border: solid 3px var(--custom-underline-colour, var(--taupe));
-    border-color: var(--custom-underline-colour, var(--taupe)) transparent transparent transparent;
-    border-radius: 100%;
-    content: '';
-    height: 2px;
-    inset: auto auto max(-0.45em, -9px) -4px;
-    position: absolute;
-    transition: opacity 500ms ease-in-out;
-    width: 100%;
-    z-index: -1;
-  }
+  text-decoration: transparent dashed underline 1px;
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 200ms ease-in-out;
 }
 
 [data-underline=hide-on-hover] {
-  
-    &::after {
-      opacity: 1;
-    }
-  
-    &:hover {
-  
-      &::after {
-        opacity: 0;
-      }
-    }
+  text-decoration-color: var(--greyish-dark-brown);
+
+  &:hover {
+    text-decoration-color: transparent;
+  }
 }
 
 [data-underline=show-on-hover] {
-
-  &::after {
-    opacity: 0;
-  }
+  text-decoration-color: transparent;
 
   &:hover {
-
-    &::after {
-      opacity: 1;
-    }
+    text-decoration-color: var(--greyish-dark-brown);
   }
 }
