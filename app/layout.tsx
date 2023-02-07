@@ -3,6 +3,7 @@ import '@styles/styles.css'
 import '@styles/animations.css'
 import { AnimationProvider } from '@providers/AnimationContext'
 import { Lora, Inter } from '@next/font/google'
+import NoScript from '@components/NoScript'
 
 const lora = Lora({
   subsets: ['latin'],
@@ -23,6 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       */}
       <head />
       <body>
+        <NoScript />
         <AnimationProvider>{children}</AnimationProvider>
       </body>
     </html>
