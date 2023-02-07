@@ -23,6 +23,7 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
 
   const handleAnimation = (target: HTMLElement, index: number) => {
     const DELAY_MULTIPLIER = 150
+    const BUMP = DELAY_MULTIPLIER * 2
     const delay = index * DELAY_MULTIPLIER
     const duration = parseFloat(window.getComputedStyle(target).getPropertyValue('--duration'))
     const style = target.getAttribute('style')
@@ -35,7 +36,7 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
       delete target.dataset.animating
 
       style ? target.setAttribute('style', style) : target.removeAttribute('style')
-    }, delay + duration)
+    }, delay + duration + BUMP)
   }
 
   const callback = (entries: IntersectionObserverEntry[]) => {
