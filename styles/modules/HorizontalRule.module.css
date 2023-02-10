@@ -1,0 +1,8 @@
+.horizontal-rule {
+  background-color: var(--horizontal-rule-colour, var(--greyish-brown-dark));
+  block-size: var(--horizontal-rule-block, 0.5px);
+  border-width: 0;
+  display: block;
+  inline-size: var(--horizontal-rule-inline, 100px);
+  margin: var(--horizontal-rule-spacing, var(--space-4x)) auto;
+}

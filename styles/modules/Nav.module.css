@@ -19,12 +19,8 @@
 .nav__item {
   display: block;
   text-align: center;
-  text-decoration: none;
 
   &[aria-current=page][data-underline] {
-
-    &::after {
-      opacity: 1;
-    }
+    text-decoration-color: var(--greyish-brown-dark);
   }
 }

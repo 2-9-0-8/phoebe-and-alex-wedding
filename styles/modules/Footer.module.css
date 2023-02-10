@@ -1,5 +1,11 @@
 .footer {
   font-size: .875rem;
   padding: var(--space-16x) 0 var(--space-10x) 0;
-  text-align: end;
+  text-align: center;
+}
+
+.footer__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
 }
