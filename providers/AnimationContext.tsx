@@ -68,7 +68,8 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
     targets?.current.map((target: HTMLElement) => observer?.observe(target))
 
     return () => {
-      targets?.current.map((target: HTMLElement) => observer?.unobserve(target))
+      observer?.disconnect()
+      observer = null
     }
   }, [location, observerActivated])
 
