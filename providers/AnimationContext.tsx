@@ -64,6 +64,7 @@ export function AnimationProvider({ children }: { children: React.ReactNode }) {
 
     observer = new IntersectionObserver(callback, options)
 
+    targets.current = []
     elements.map(element => targets.current.push(element))
     targets?.current.map((target: HTMLElement) => observer?.observe(target))
 
