@@ -9,7 +9,7 @@
   --body-background: var(--light-taupe);
   --main-text-colour: var(--greyish-brown-dark);
 
-  --font-serif: var(--font-lora);
+  --font-serif: var(--font-cormorant);
   --font-sans: var(--font-inter);
 
   --space: 4px;
@@ -63,7 +63,7 @@ body {
   color: var(--main-text-colour);
   display: flex;
   flex-direction: column;
-  font-family: var(--font-sans);
+  font-family: var(--font-serif);
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0.01em;

@@ -2,21 +2,14 @@ import '@styles/reset.css'
 import '@styles/styles.css'
 import '@styles/animations.css'
 import { AnimationProvider } from '@providers/AnimationContext'
-import { Lora, Inter } from '@next/font/google'
+import { Cormorant } from '@next/font/google'
 import NoScript from '@components/NoScript'
 
-const lora = Lora({
-  subsets: ['latin'],
-  variable: '--font-lora',
-  weight: ['400', '600'],
-  style: ['normal', 'italic'],
-})
-
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const cormorant = Cormorant({ subsets: ['latin'], variable: '--font-cormorant' })
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" dir="ltr" className={[lora.variable, inter.variable].join(' ')}>
+    <html lang="en" dir="ltr" className={cormorant.variable}>
       <meta content="width=device-width, initial-scale=1" name="viewport" />
       {/*
         <head /> will contain the components returned by the nearest parent
