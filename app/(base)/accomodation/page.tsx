@@ -50,9 +50,9 @@ export default function Accomodation() {
         </a>{' '}
         (also the priciest option). See a full list of options below.
       </p>
-      <ul className="bullet">
+      <ul className="bullet" data-animate>
         {d.map(({ name, url }) => (
-          <li key={name} data-animate>
+          <li key={name}>
             <a href={url} data-underline="hide-on-hover">
               {name}
             </a>
