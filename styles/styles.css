@@ -10,7 +10,7 @@
   --main-text-colour: var(--greyish-brown-dark);
 
   --font-serif: var(--font-lora);
-  --font-sans: var(--font-inter);
+  --font-sans: var(--font-open-sans);
 
   --space: 4px;
   --space-2x: calc(2 * var(--space));
