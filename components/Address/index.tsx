@@ -4,7 +4,7 @@ import { location } from '@data/location.ts'
 export default function Address() {
   return (
     <div className={styles.address}>
-      <address data-animate>
+      <address>
         {location.address.split(', ').map((line: string) => (
           <span key={line}>{line}</span>
         ))}

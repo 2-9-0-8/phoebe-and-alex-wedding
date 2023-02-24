@@ -126,7 +126,7 @@ export default function ResponseForm() {
           <>
             {!status.attempted ? (
               <Form className={`[ flow ] ${styles.response}`}>
-                <div className={styles['response__section']} data-animate>
+                <div className={styles['response__section']}>
                   <label>
                     <span className={styles['response__label']}>Name(s)</span>
                     <Field name="from_name" type="text" />
@@ -134,7 +134,7 @@ export default function ResponseForm() {
                   <ErrorMessage component="div" className={styles['response__error']} name="from_name" />
                 </div>
 
-                <div className={styles['response__section']} data-animate>
+                <div className={styles['response__section']}>
                   <label>
                     <span className={styles['response__label']}>Email</span>
                     <Field name="from_email" type="email" />
@@ -142,7 +142,7 @@ export default function ResponseForm() {
                   <ErrorMessage component="div" className={styles['response__error']} name="from_email" />
                 </div>
 
-                <div className={styles['response__section']} data-animate>
+                <div className={styles['response__section']}>
                   <label>
                     <span className={styles['response__label']}>RSVP</span>
                     <Field name="rsvp" as="select">
@@ -160,18 +160,17 @@ export default function ResponseForm() {
                   id="food-choice"
                   className={styles['response__section']}
                   role="group"
-                  data-state={values.rsvp !== 'Attending' ? 'has-disabled' : null}
-                  data-animate>
+                  data-state={values.rsvp !== 'Attending' ? 'has-disabled' : null}>
                   <p aria-labelledby="food-choice" className={styles['response__label']}>
                     Food Choice
                   </p>
 
-                  <div className={styles['response__group']} data-animate>
+                  <div className={styles['response__group']}>
                     <label>
-                      Meat 
+                      Meat
                       <Field name="food" type="radio" value="Meat" disabled={values.rsvp !== 'Attending'} />
                     </label>
-                    
+
                     <label>
                       Vegetarian
                       <Field name="food" type="radio" value="Vegetarian" disabled={values.rsvp !== 'Attending'} />
@@ -189,13 +188,12 @@ export default function ResponseForm() {
                   id="dietary-requirements"
                   className={styles['response__section']}
                   role="group"
-                  data-state={values.rsvp !== 'Attending' ? 'has-disabled' : null}
-                  data-animate>
+                  data-state={values.rsvp !== 'Attending' ? 'has-disabled' : null}>
                   <p aria-labelledby="dietary-requirements" className={styles['response__label']}>
                     Do you have any additional dietary requirements?
                   </p>
 
-                  <div className={styles['response__group']} data-animate>
+                  <div className={styles['response__group']}>
                     <label>
                       No
                       <Field
@@ -221,8 +219,7 @@ export default function ResponseForm() {
 
                 <div
                   className={styles['response__section']}
-                  data-state={values.dietary_requirements !== 'Yes' ? 'has-disabled' : null}
-                  data-animate>
+                  data-state={values.dietary_requirements !== 'Yes' ? 'has-disabled' : null}>
                   <label>
                     <span className={styles['response__label']}>Specify additional dietary requirements</span>
                     <Field
@@ -241,8 +238,7 @@ export default function ResponseForm() {
                 <button
                   className={styles['response__submit']}
                   type="submit"
-                  disabled={isSubmitting || !isValid || !dirty || (status && status.success)}
-                  data-animate>
+                  disabled={isSubmitting || !isValid || !dirty || (status && status.success)}>
                   Submit
                 </button>
               </Form>

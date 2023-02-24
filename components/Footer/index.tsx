@@ -3,7 +3,7 @@ import styles from '@styles/modules/Footer.module.css'
 
 export default function Footer() {
   return (
-    <footer className={styles.footer} data-animate>
+    <footer className={styles.footer}>
       <h3 className={styles['footer__title']}>
         A & P
       </h3>

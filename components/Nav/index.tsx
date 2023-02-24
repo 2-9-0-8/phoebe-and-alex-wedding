@@ -9,7 +9,7 @@ export default function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav data-animate>
+    <nav>
       <ul className={styles.nav}>
         {routes.map(({ label, href }) => (
           <li key={href}>

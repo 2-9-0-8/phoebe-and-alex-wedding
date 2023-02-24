@@ -31,16 +31,16 @@ const d = [
 export default function Accomodation() {
   return (
     <Container flow space={'var(--space-6x)'}>
-      <p data-animate>
+      <p>
         The closest towns are Corsham and Bath with lots of airbnbs available.
       </p>
 
-      <p data-animate>
+      <p>
         We have also compiled a list of B&Bs and Hotels nearby to help you with booking accommodation (which you should
         have received already).
       </p>
 
-      <p data-animate>
+      <p>
         The closest hotel to the venue is{' '}
         <a data-underline="hide-on-hover" href="https://www.rudloearms.com/the-venue">
           The Rudloe Arms
@@ -55,10 +55,9 @@ export default function Accomodation() {
         height={181} 
         alt="The whole gang, Phoebe, Alex and Lucca" 
         quality={100}
-        style={{ float: 'right', marginTop: '-10px' }} 
-        data-animate />
+        style={{ float: 'right', marginTop: '-10px' }} />
 
-      <ul className="bullet" data-animate>
+      <ul className="bullet">
         {d.map(({ name, url }) => (
           <li key={name}>
             <a href={url} data-underline="hide-on-hover">
@@ -68,7 +67,7 @@ export default function Accomodation() {
         ))}
       </ul>
 
-      <p data-animate>
+      <p>
         There is also an option to camp in a field at the farm, there are showers and toilet facilities for campers on
         site. Please let us know if you wish to camp.
       </p>
@@ -79,8 +78,7 @@ export default function Accomodation() {
         width={502} 
         height={363} 
         alt="The whole gang, Phoebe, Alex and Lucca" 
-        quality={100} 
-        data-animate />
+        quality={100} />
     </Container>
   )
 }
