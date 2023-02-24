@@ -12,7 +12,7 @@ export default function Home() {
       <Sunflower />
       <main>
         <Container>
-          <div className={styles.landing}>
+          <div className={ `${styles.landing} [ flow ]`}>
 
             <p className={styles['landing__message']} data-animate>
               We're getting married and we'd love you to be there! Please{' '}
