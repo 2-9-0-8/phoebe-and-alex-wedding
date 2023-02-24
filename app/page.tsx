@@ -15,7 +15,7 @@ export default function Home() {
         <Container>
           <div className={ `${styles.landing} [ flow ]`}>
 
-            <p className={styles['landing__message']} data-animate>
+            <p className={styles['landing__message']}>
               We're getting married and we'd love you to be there! Please{' '}
               <Link href="/venue" data-underline="hide-on-hover">
                 click here
@@ -32,7 +32,6 @@ export default function Home() {
               height={393}
               alt=""
               quality={100}
-              data-animate
             />
 
           </div>

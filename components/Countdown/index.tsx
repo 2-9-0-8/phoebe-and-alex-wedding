@@ -2,7 +2,6 @@
 
 import useCountdown from '@utils/useCountdown'
 import styles from '@styles/modules/Countdown.module.css'
-import { Suspense } from 'react';
 
 function Display({ value, type }: { value: number; type: string }) {
   return (
@@ -17,7 +16,7 @@ export default function Countdown() {
   const [days, hours, minutes, seconds] = useCountdown('06/17/2023')
 
   return (
-    <div className={styles.countdown} data-animate>
+    <div className={styles.countdown}>
       <ol className={styles['countdown__list']} role="list">
         <Display value={days} type="Days" />
         <Display value={hours} type="Hours" />
