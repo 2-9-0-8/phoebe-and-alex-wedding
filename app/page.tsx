@@ -13,7 +13,7 @@ export default function Home() {
       <main>
         <Container>
           <div className={styles.landing}>
-            
+
             <p className={styles['landing__message']} data-animate>
               We're getting married and we'd love you to be there! Please{' '}
               <Link href="/venue" data-underline="hide-on-hover">
@@ -21,6 +21,8 @@ export default function Home() {
               </Link>{' '}
               for further details and to confirm if you can make the date.
             </p>
+
+            <Countdown />
 
             <Image
               className={`${styles['landing-image']} lw`}
@@ -31,8 +33,6 @@ export default function Home() {
               quality={100}
               data-animate
             />
-
-            <Countdown />
 
             <Footer />
 
