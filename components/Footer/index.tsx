@@ -7,7 +7,7 @@ export default function Footer() {
       <h3 className={styles['footer__title']}>
         A & P
       </h3>
-      <HorizontalRule inlineSize={200} spacing={8} />
+      <HorizontalRule inlineSize={150} spacing={6} colour={'var(--taupe)'} />
       <p>17/06/2023</p>
     </footer>
   )

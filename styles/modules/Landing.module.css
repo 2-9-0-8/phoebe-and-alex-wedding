@@ -21,3 +21,9 @@
   font-size: var(--landing-message-font-size);
   text-align: center;
 }
+
+.landing-image {
+  border-radius: 5px;
+  display: block;
+  margin: var(--space-10x) auto;
+}

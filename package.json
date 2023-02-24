@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@emailjs/browser": "^3.10.0",
+    "@googlemaps/react-wrapper": "^1.1.35",
     "@next/font": "13.1.1",
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "@csstools/postcss-nesting-experimental": "^1.1.1",
+    "@types/google.maps": "^3.52.0",
     "postcss": "^8.4.21",
     "postcss-preset-env": "^7.8.3"
   }

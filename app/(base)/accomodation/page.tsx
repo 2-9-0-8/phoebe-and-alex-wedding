@@ -1,5 +1,5 @@
 import Container from '@components/Container'
-import Response from '@components/Response'
+import Image from 'next/image'
 
 const d = [
   {
@@ -15,28 +15,25 @@ const d = [
     url: 'https://butcombe.com/the-methuen-arms-wiltshire/',
   },
   {
-    name: 'Lorne House Box',
-    url: 'https://www.lornehousebox.co.uk/',
-  },
-  {
     name: 'The Northey Arms',
     url: 'https://butcombe.com/the-northey-arms-wiltshire/',
-  },
-  {
-    name: 'The Quarrymans Arms',
-
-    url: 'https://butcombe.com/the-quarrymans-arms-wiltshire/',
   },
   {
     name: 'Pickwick Farm',
     url: 'http://www.pickwickfarm.co.uk/',
   },
+  {
+    name: 'Bath City Centre Hotel',
+    url: 'https://www.premierinn.com/gb/en/hotels/england/somerset/bath/bath-city-centre.html',
+  }
 ]
 
 export default function Accomodation() {
   return (
     <Container flow space={'var(--space-6x)'}>
-      <p data-animate>The closest towns are Corsham and Bath with lots of airbnbs available.</p>
+      <p data-animate>
+        The closest towns are Corsham and Bath with lots of airbnbs available.
+      </p>
 
       <p data-animate>
         We have also compiled a list of B&Bs and Hotels nearby to help you with booking accommodation (which you should
@@ -50,6 +47,17 @@ export default function Accomodation() {
         </a>{' '}
         (also the priciest option). See a full list of options below.
       </p>
+
+      <Image 
+        className="[ lw hm ]" 
+        src={'/image/lillwhites__5.png'} 
+        width={251} 
+        height={181} 
+        alt="The whole gang, Phoebe, Alex and Lucca" 
+        quality={100}
+        style={{ float: 'right', marginTop: '-10px' }} 
+        data-animate />
+
       <ul className="bullet" data-animate>
         {d.map(({ name, url }) => (
           <li key={name}>
@@ -64,6 +72,15 @@ export default function Accomodation() {
         There is also an option to camp in a field at the farm, there are showers and toilet facilities for campers on
         site. Please let us know if you wish to camp.
       </p>
+
+      <Image 
+        className="[ lw hd ]" 
+        src={'/image/lillwhites__5.png'} 
+        width={502} 
+        height={363} 
+        alt="The whole gang, Phoebe, Alex and Lucca" 
+        quality={100} 
+        data-animate />
     </Container>
   )
 }

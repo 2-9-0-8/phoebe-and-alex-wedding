@@ -18,9 +18,15 @@
 
 .nav__item {
   display: block;
+  font-size: .85rem;
+  font-weight: 700;
   text-align: center;
 
   &[aria-current=page][data-underline] {
-    text-decoration-color: var(--greyish-brown-dark);
+    text-decoration-color: var(--taupe);
+  }
+
+  @media (--viewport-smallest+) {
+    font-size: 1rem;
   }
 }

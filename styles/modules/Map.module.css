@@ -1,0 +1,5 @@
+.map {
+  aspect-ratio: 1 / 1;
+  inline-size: min(400px, 100%);
+  margin: var(--space-16x) auto 0 auto;
+}

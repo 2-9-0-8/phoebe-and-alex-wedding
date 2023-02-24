@@ -9,11 +9,15 @@ export const routes: Route[] = [
     href: '/venue',
   },
   {
-    label: 'Attendance',
-    href: '/attendance',
+    label: 'RSVP',
+    href: '/rsvp',
   },
   {
     label: 'Accomodation',
     href: '/accomodation',
+  },
+  {
+    label: 'Gifts',
+    href: '/gifts',
   },
 ]

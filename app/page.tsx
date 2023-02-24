@@ -1,12 +1,10 @@
-import { Suspense } from 'react'
-import dynamic from 'next/dynamic'
 import Container from '@components/Container'
 import styles from '@styles/modules/Landing.module.css'
 import Link from 'next/link'
 import Sunflower from '@components/Sunflower'
 import Footer from '@components/Footer'
-
-const Countdown = dynamic(() => import('@components/Countdown'), { ssr: false })
+import Countdown from '@components/Countdown'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -15,6 +13,7 @@ export default function Home() {
       <main>
         <Container>
           <div className={styles.landing}>
+            
             <p className={styles['landing__message']} data-animate>
               We're getting married and we'd love you to be there! Please{' '}
               <Link href="/venue" data-underline="hide-on-hover">
@@ -22,10 +21,21 @@ export default function Home() {
               </Link>{' '}
               for further details and to confirm if you can make the date.
             </p>
-            <Suspense fallback={'Countdown loading...'}>
-              <Countdown />
-            </Suspense>
+
+            <Image
+              className={`${styles['landing-image']} lw`}
+              src={'/image/lillwhites__1.jpg'}
+              width={524}
+              height={393}
+              alt=""
+              quality={100}
+              data-animate
+            />
+
+            <Countdown />
+
             <Footer />
+
           </div>
         </Container>
       </main>

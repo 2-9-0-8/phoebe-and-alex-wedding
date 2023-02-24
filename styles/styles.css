@@ -80,6 +80,10 @@ main {
   }
 }
 
+:where(a) {
+  font-weight: 600;
+}
+
 .flow {
 
   > * + * {
@@ -88,13 +92,13 @@ main {
 }
 
 [data-underline] {
-  text-decoration: transparent dashed underline 1px;
+  text-decoration: transparent solid underline 1px;
   text-underline-offset: 0.2em;
   transition: text-decoration-color 200ms ease-in-out;
 }
 
 [data-underline=hide-on-hover] {
-  text-decoration-color: var(--greyish-dark-brown);
+  text-decoration-color: var(--taupe);
 
   &:hover {
     text-decoration-color: transparent;
@@ -105,7 +109,7 @@ main {
   text-decoration-color: transparent;
 
   &:hover {
-    text-decoration-color: var(--greyish-dark-brown);
+    text-decoration-color: var(--taupe);
   }
 }
 
@@ -118,5 +122,27 @@ main {
     &::marker {
       color: var(--greyish-brown-dark);
     }
+  }
+}
+
+.lw {
+  block-size: auto;
+  border-radius: 5px;
+  margin: var(--space-8x) auto;
+}
+
+.hm {
+  display: none;
+
+  @media (--viewport-medium+) {
+    display: block;
+  }
+}
+
+.hd {
+  display: block;
+
+  @media (--viewport-medium+) {
+    display: none;
   }
 }
