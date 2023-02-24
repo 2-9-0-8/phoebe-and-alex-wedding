@@ -2,9 +2,10 @@ import Container from '@components/Container'
 import styles from '@styles/modules/Landing.module.css'
 import Link from 'next/link'
 import Sunflower from '@components/Sunflower'
-import Footer from '@components/Footer'
-import Countdown from '@components/Countdown'
 import Image from 'next/image'
+import dynamic from 'next/dynamic'
+
+const Countdown = dynamic(() => import('@components/Countdown'))
 
 export default function Home() {
   return (

@@ -17,15 +17,13 @@ export default function Countdown() {
   const [days, hours, minutes, seconds] = useCountdown('06/17/2023')
 
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-      <div className={styles.countdown} data-animate>
-        <ol className={styles['countdown__list']} role="list">
-          <Display value={days} type="Days" />
-          <Display value={hours} type="Hours" />
-          <Display value={minutes} type="Minutes" />
-          <Display value={seconds} type="Seconds" />
-        </ol>
-      </div>
-    </Suspense>
+    <div className={styles.countdown} data-animate>
+      <ol className={styles['countdown__list']} role="list">
+        <Display value={days} type="Days" />
+        <Display value={hours} type="Hours" />
+        <Display value={minutes} type="Minutes" />
+        <Display value={seconds} type="Seconds" />
+      </ol>
+    </div>
   )
 }

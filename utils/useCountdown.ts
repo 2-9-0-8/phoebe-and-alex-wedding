@@ -17,10 +17,6 @@ export default function useCountdown(target: string) {
   const [remaining, setRemaining] = useState(initialState)
   const countdown = useRef<ReturnType<typeof setInterval>>()
 
-  if (typeof window === 'undefined') {
-    throw new Error('useCountdown can only be used on the client');
-  }
-
   useEffect(() => {
     countdown.current = setInterval(() => {
       setRemaining(calculateRemaining(target))
