@@ -5,7 +5,7 @@ import Sunflower from '@components/Sunflower'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
 
-const Countdown = dynamic(() => import('@components/Countdown'))
+const Countdown = dynamic(() => import('@components/Countdown'), { ssr: false })
 
 export default function Home() {
   return (
