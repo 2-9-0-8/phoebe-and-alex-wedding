@@ -34,8 +34,6 @@ export default function Home() {
               data-animate
             />
 
-            <Footer />
-
           </div>
         </Container>
       </main>

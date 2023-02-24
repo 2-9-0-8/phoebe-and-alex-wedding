@@ -1,9 +1,11 @@
 .landing {
-  block-size: 100vb;
+  --flow-space: var(--space-10x);
+
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 auto;
+  min-block-size: 100vb;
   padding: var(--space-10x) 0 0 0;
 }
 
