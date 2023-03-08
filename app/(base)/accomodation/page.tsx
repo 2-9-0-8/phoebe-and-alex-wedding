@@ -48,23 +48,12 @@ export default function Accomodation() {
         (also the priciest option). See a full list of options below.
       </p>
 
-      {/**
       <Image 
         className="[ lw hm ]" 
         src={'/image/lillwhites__5.png'} 
         width={251} 
         height={181} 
         alt="The whole gang, Phoebe, Alex and Lucca" 
-        quality={100}
-        style={{ float: 'right', marginTop: '-10px' }} />
-      */}
-
-      <Image 
-        className="[ lw hm ]" 
-        src={'/image/venue2.jpg'} 
-        width={341.3} 
-        height={227.6} 
-        alt="The venue" 
         quality={100}
         style={{ float: 'right', marginTop: '-10px' }} />
 
@@ -83,22 +72,12 @@ export default function Accomodation() {
         site. Please let us know if you wish to camp.
       </p>
 
-      {/**
       <Image 
         className="[ lw hd ]" 
         src={'/image/lillwhites__5.png'} 
         width={502} 
         height={363} 
         alt="The whole gang, Phoebe, Alex and Lucca" 
-        quality={100} />
-      */}
-
-      <Image 
-        className="[ lw ]" 
-        src={'/image/venue4.jpeg'} 
-        width={640} 
-        height={426.5} 
-        alt="The venue" 
         quality={100} />
     </Container>
   )

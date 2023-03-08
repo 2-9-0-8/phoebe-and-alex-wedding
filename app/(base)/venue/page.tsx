@@ -6,7 +6,16 @@ import Image from 'next/image'
 export default function Venue() {
   return (
     <Container flow space={'var(--space-6x)'}>
+
+    <Image 
+        className="[ lw ]" 
+        src={'/image/venue4.jpeg'} 
+        width={640} 
+        height={426.5} 
+        alt="The venue" 
+        quality={100} />
       <p>
+        {/**
         <Image 
           className="[ lw hm ]" 
           src={'/image/lillwhites__2.jpg'} 
@@ -15,12 +24,14 @@ export default function Venue() {
           alt="Phoebe and Alex on holiday drinking what looks like some sort of Mimosa and a Negroni" 
           quality={100}
           style={{ float: 'right' }} />
+        */}
 
         The wedding will be held at Lower Rudloe Farm.
       </p>
 
       <Address />
 
+      {/**
       <Image 
         className="[ lw hd ]" 
         src={'/image/lillwhites__3.png'} 
@@ -28,6 +39,7 @@ export default function Venue() {
         height={521} 
         alt="That time we spent a lovely day by the sea - picture of us, Phoebe and Alex, overlooking the sea" 
         quality={100} />
+      */}
 
       <p>
         Parking will be able available onsite, please let us know if you require parking so we know roughly how many
@@ -44,6 +56,14 @@ export default function Venue() {
       </ul>
 
       <VenueMap />
+
+      <Image 
+        className="[ lw ]" 
+        src={'/image/venue2.jpg'} 
+        width={341.3} 
+        height={227.6} 
+        alt="The venue" 
+        quality={100} />
     </Container>
   )
 }
