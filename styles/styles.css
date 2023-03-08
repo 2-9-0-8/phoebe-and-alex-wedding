@@ -1,4 +1,5 @@
 :root {
+  --white: #fff;
   --lightest-taupe: #f9f8f6;
   --light-taupe: #f1f0ec;
   --taupe: #d3d0c7;
@@ -6,7 +7,7 @@
   --light-pink: #fae6e8;
   --pink-red: #c93847;
 
-  --body-background: var(--light-taupe);
+  --body-background: var(--white);
   --main-text-colour: var(--greyish-brown-dark);
 
   --font-serif: var(--font-lora);

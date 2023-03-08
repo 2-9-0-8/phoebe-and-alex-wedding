@@ -6,7 +6,7 @@ export default function Address() {
     <div className={styles.address}>
       <address>
         {location.address.split(', ').map((line: string) => (
-          <span key={line}>{line}</span>
+          <strong key={line}>{line}</strong>
         ))}
       </address>
     </div>
