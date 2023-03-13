@@ -31,6 +31,14 @@ const d = [
 export default function Accomodation() {
   return (
     <Container flow space={'var(--space-6x)'}>
+      <Image 
+        className="[ lw ]" 
+        src={'/image/lillwhites__8.jpeg'} 
+        width={383.5} 
+        height={215.5} 
+        alt="Alex and Phoebe" 
+        quality={100} />
+
       <p>
         The closest towns are Corsham and Bath with lots of airbnbs available.
       </p>
@@ -48,6 +56,7 @@ export default function Accomodation() {
         (also the priciest option). See a full list of options below.
       </p>
 
+      {/**
       <Image 
         className="[ lw hm ]" 
         src={'/image/lillwhites__5.png'} 
@@ -56,6 +65,7 @@ export default function Accomodation() {
         alt="The whole gang, Phoebe, Alex and Lucca" 
         quality={100}
         style={{ float: 'right', marginTop: '-10px' }} />
+      */}
 
       <ul className="bullet">
         {d.map(({ name, url }) => (
@@ -68,10 +78,11 @@ export default function Accomodation() {
       </ul>
 
       <p>
-        There is also an option to camp in a field at the farm, there are showers and toilet facilities for campers on
+        There is also an option to camp in a field at the farm, there are toilet facilities for campers on
         site. Please let us know if you wish to camp.
       </p>
 
+      {/**
       <Image 
         className="[ lw hd ]" 
         src={'/image/lillwhites__5.png'} 
@@ -79,6 +90,7 @@ export default function Accomodation() {
         height={363} 
         alt="The whole gang, Phoebe, Alex and Lucca" 
         quality={100} />
+      */}
     </Container>
   )
 }

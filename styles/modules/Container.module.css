@@ -1,6 +1,10 @@
 .container {
-  --container-padding-inline: var(--space-8x);
-  --container-padding: 0 var(--space-8x);
+  --container-padding-inline: var(--space-4x);
+  --container-padding: 0 var(--container-padding-inline);
+
+  @media (--viewport-medium+) {
+    --container-padding-inline: var(--space-8x);
+  }
 
   inline-size: 100%;
   margin-inline: auto;
