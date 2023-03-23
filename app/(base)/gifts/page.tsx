@@ -42,10 +42,17 @@ export default function Gifts() {
         data-frame-columns-split="even">
         {items.map((item, index) => (
           <div key={index} style={{ position: 'relative', height: '200px' }} data-layout-break>
-            <Image src={item} fill alt="" quality={100} 
-            style={{ 
-              objectFit: 'cover',
-              objectPosition: needsShifting.includes(index) ? '0 3px' : '' }} />
+            <Image
+              src={item}
+              fill
+              alt=""
+              quality={100}
+              className="[ lw ]"
+              style={{
+                objectFit: 'cover',
+                objectPosition: needsShifting.includes(index) ? '0 3px' : '',
+              }}
+            />
           </div>
         ))}
       </div>
