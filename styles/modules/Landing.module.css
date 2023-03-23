@@ -1,22 +1,18 @@
 .landing {
-  --flow-space: var(--space-10x);
+  --flow-space: var(--space-8x);
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   min-block-size: 100vb;
-  padding: var(--space-10x) 0 0 0;
+  padding: var(--space-10x) 0;
 }
 
 .landing__message {
-  --landing-message-font-size: 1rem;
+  --landing-message-font-size: 1.25rem;
 
-  @media (--viewport-smallest+) {
-    --landing-message-font-size: 1.25rem;
-  }
-
-  @media (--viewport-medium+) {
+  @media (height > 700px) {
     --landing-message-font-size: 1.8rem;
   }
 
@@ -27,5 +23,5 @@
 .landing-image {
   border-radius: 5px;
   display: block;
-  margin: var(--space-10x) auto;
+  margin-inline: auto;
 }
