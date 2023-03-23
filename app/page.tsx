@@ -23,8 +23,6 @@ export default function Home() {
               for further details and to confirm if you can make the date.
             </p>
 
-            <Countdown />
-
             <Image
               className={`${styles['landing-image']} lw`}
               src={'/image/lillwhites__1.jpg'}
@@ -33,6 +31,8 @@ export default function Home() {
               alt=""
               quality={100}
             />
+
+            <Countdown />
 
           </div>
         </Container>

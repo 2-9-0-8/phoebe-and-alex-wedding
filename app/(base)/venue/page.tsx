@@ -6,14 +6,7 @@ import Image from 'next/image'
 export default function Venue() {
   return (
     <Container flow space={'var(--space-6x)'}>
-
-    <Image 
-        className="[ lw ]" 
-        src={'/image/venue4.jpeg'} 
-        width={640} 
-        height={426.5} 
-        alt="The venue" 
-        quality={100} />
+      <Image className="[ lw ]" src={'/image/venue4.jpeg'} width={640} height={426.5} alt="The venue" quality={100} />
       <p>
         {/**
         <Image 
@@ -25,11 +18,8 @@ export default function Venue() {
           quality={100}
           style={{ float: 'right' }} />
         */}
-
         The wedding will be held at Lower Rudloe Farm.
       </p>
-
-      <Address />
 
       {/**
       <Image 
@@ -55,15 +45,16 @@ export default function Venue() {
         </li>
       </ul>
 
-      <VenueMap />
+      <div
+        className="[ frame ]"
+        data-frame-columns-split="even"
+        data-frame-collapse-after="medium"
+        data-frame-columns-count="2">
+        <VenueMap />
+        <Address />
+      </div>
 
-      <Image 
-        className="[ lw ]" 
-        src={'/image/venue2.jpg'} 
-        width={341.3} 
-        height={227.6} 
-        alt="The venue" 
-        quality={100} />
+      <Image className="[ lw ]" src={'/image/venue2.jpg'} width={682.6} height={453.2} alt="The venue" quality={100} />
     </Container>
   )
 }
