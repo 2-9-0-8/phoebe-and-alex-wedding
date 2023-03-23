@@ -17,7 +17,7 @@ const items = [
 ]
 
 export default function Gifts() {
-  const needsShifting = [12]
+  const needsShifting = [11]
 
   return (
     <Container flow space={'var(--space-8x)'}>
@@ -50,7 +50,7 @@ export default function Gifts() {
               className="[ lw ]"
               style={{
                 objectFit: 'cover',
-                objectPosition: needsShifting.includes(index) ? '0 3px' : '',
+                objectPosition: needsShifting.includes(index) ? '0 1px' : '',
               }}
             />
           </div>
