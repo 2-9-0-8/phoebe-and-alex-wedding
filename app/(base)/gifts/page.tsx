@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Container from '@components/Container'
+import styles from '@styles/modules/GridImages.module.css'
 
 const items = [
   '/image/lillwhites_9.jpg',
@@ -8,16 +9,15 @@ const items = [
   '/image/lillwhites_12.jpg',
   '/image/lillwhites_13.jpg',
   '/image/lillwhites_14.jpg',
-  '/image/lillwhites_15.jpg',
+  '/image/lillwhites_11.jpg',
   '/image/lillwhites_24.jpg',
   '/image/lillwhites_18.jpg',
   '/image/lillwhites_19.jpg',
   '/image/lillwhites_21.jpg',
-  '/image/lillwhites_22.jpg',
+  '/image/lillwhites_20.jpg',
 ]
 
 export default function Gifts() {
-  const needsShifting = [11]
 
   return (
     <Container flow space={'var(--space-8x)'}>
@@ -38,19 +38,20 @@ export default function Gifts() {
       <div
         className="[ frame ]"
         data-frame-columns-count="3"
-        data-frame-collapse-after="medium"
+        data-frame-collapse-after="small"
         data-frame-columns-split="even">
         {items.map((item, index) => (
-          <div key={index} style={{ position: 'relative', height: '200px' }} data-layout-break>
+          <div key={index} style={{ position: 'relative', height: '200px', width: '100%' }} data-layout-break>
             <Image
+              key={index}
               src={item}
+              className={['[ lw ]', styles['grid-images'], styles[`grid-images--${String(index + 1)}`]].join(' ')}
               fill
               alt=""
               quality={100}
-              className="[ lw ]"
               style={{
                 objectFit: 'cover',
-                objectPosition: needsShifting.includes(index) ? '0 1px' : '',
+                //objectPosition: needsShifting.includes(index) ? '0 0 ' : '50% 50%',
               }}
             />
           </div>

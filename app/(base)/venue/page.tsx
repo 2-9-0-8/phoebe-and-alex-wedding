@@ -31,6 +31,15 @@ export default function Venue() {
         quality={100} />
       */}
 
+      <div
+        className="[ frame ]"
+        data-frame-columns-split="even"
+        data-frame-collapse-after="medium"
+        data-frame-columns-count="2">
+        <VenueMap />
+        <Address />
+      </div>
+
       <p>
         Parking will be able available onsite, please let us know if you require parking so we know roughly how many
         cars to expect. Taxis are easily available from the surrounding areas including Bath and Chippenham.
@@ -44,15 +53,6 @@ export default function Venue() {
           </a>
         </li>
       </ul>
-
-      <div
-        className="[ frame ]"
-        data-frame-columns-split="even"
-        data-frame-collapse-after="medium"
-        data-frame-columns-count="2">
-        <VenueMap />
-        <Address />
-      </div>
 
       <Image className="[ lw ]" src={'/image/venue2.jpg'} width={682.6} height={453.2} alt="The venue" quality={100} />
     </Container>

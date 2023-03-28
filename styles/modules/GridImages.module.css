@@ -1,0 +1,22 @@
+.grid-images--7 {
+  object-position: 0 15%;
+
+  @media (--viewport-small+) {
+    object-position: 0 0;
+  }
+}
+
+.grid-images--10 {
+
+  @media (--viewport-small+) {
+    object-position: 90% 0;
+  }
+}
+
+.grid-images--12 {
+  object-position: 0 15%;
+
+  @media (--viewport-small+) {
+    object-position: 0 0;
+  }
+}

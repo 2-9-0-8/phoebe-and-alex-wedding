@@ -13,7 +13,7 @@ export default function Home() {
       <Sunflower />
       <main>
         <Container>
-          <div className={ `${styles.landing} [ flow ]`}>
+          <div className={`${styles.landing} [ flow ]`}>
 
             <p className={styles['landing__message']}>
               We're getting married and we'd love you to be there! Please{' '}
@@ -25,9 +25,9 @@ export default function Home() {
 
             <Image
               className={`${styles['landing-image']} lw`}
-              src={'/image/lillwhites__1.jpg'}
-              width={524}
-              height={393}
+              src={'/image/lillwhites_25.jpeg'}
+              width={230}
+              height={330}
               alt=""
               quality={100}
             />
