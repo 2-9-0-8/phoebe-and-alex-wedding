@@ -25,27 +25,25 @@ const d = [
   {
     name: 'Bath City Centre Hotel',
     url: 'https://www.premierinn.com/gb/en/hotels/england/somerset/bath/bath-city-centre.html',
-  }
+  },
 ]
 
 export default function Accomodation() {
   return (
     <Container flow space={'var(--space-6x)'}>
-      <Image 
-        className="[ lw ]" 
-        src={'/image/lillwhites__8.jpeg'} 
-        width={383.5} 
-        height={215.5} 
-        alt="Alex and Phoebe" 
-        quality={100} />
+      <Image
+        className="[ lw ]"
+        src={'/image/lillwhites__8.jpeg'}
+        width={383.5}
+        height={215.5}
+        alt="Alex and Phoebe"
+        quality={100}
+      />
+
+      <p>The closest towns are Corsham and Bath with lots of airbnbs available.</p>
 
       <p>
-        The closest towns are Corsham and Bath with lots of airbnbs available.
-      </p>
-
-      <p>
-        We have also compiled a list of B&Bs and Hotels nearby to help you with booking accommodation (which you should
-        have received already).
+        We have also compiled a list of B&Bs and Hotels nearby to help you with booking accommodation.
       </p>
 
       <p>
@@ -78,8 +76,8 @@ export default function Accomodation() {
       </ul>
 
       <p>
-        There is also an option to camp in a field at the farm, there are toilet facilities for campers on
-        site. Please let us know if you wish to camp.
+        There is also the option to camp onsite at the farm, with toilet facilities for campers. Please let us know if
+        you would like to camp.
       </p>
 
       {/**
