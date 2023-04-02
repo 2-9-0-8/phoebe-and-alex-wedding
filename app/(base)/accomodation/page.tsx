@@ -33,9 +33,9 @@ export default function Accomodation() {
     <Container flow space={'var(--space-6x)'}>
       <Image
         className="[ lw ]"
-        src={'/image/lillwhites__8.jpeg'}
-        width={383.5}
-        height={215.5}
+        src={'/image/lilwhites_26.jpeg'}
+        width={614}
+        height={698}
         alt="Alex and Phoebe"
         quality={100}
       />
