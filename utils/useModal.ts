@@ -1,18 +1,20 @@
-import { selectors } from '@utils/lib/selectors'
 import { useEffect } from 'react'
-import useBodyLock from './useBodyLock'
+
+import { selectors } from '@utils/lib/selectors'
+import useLock from '@utils/useLock'
 
 type ModalProps = {
   ref: React.RefObject<HTMLElement>
   _state: [boolean, React.Dispatch<React.SetStateAction<boolean>>]
   postOpenFn?: () => void
   postCloseFn?: () => void
-  lockBodyWhenOpen?: boolean
+  lockWhenOpen?: boolean
+  lightDismiss?: boolean
 }
 
 const selectorString = selectors.join(',')
 
-export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockBodyWhenOpen = true }: ModalProps) {
+export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockWhenOpen = true, lightDismiss = true }: ModalProps) {
   const [state, setState] = _state
 
   function closeFn() {
@@ -48,11 +50,7 @@ export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockBod
   }
 
   function handleFocus(direction: 'previous' | 'next') {
-    if (!state || !ref.current) {
-      return
-    }
-
-    const focusableElements: HTMLElement[] = Array.from(ref.current.querySelectorAll(selectorString))
+    const focusableElements: HTMLElement[] = Array.from(ref.current!.querySelectorAll(selectorString))
     const currentIndex = focusableElements.findIndex(el => {
       return el === document.activeElement
     })
@@ -72,6 +70,10 @@ export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockBod
   }
 
   function handleKeys(e: KeyboardEvent) {
+    if (!state || !ref.current) {
+      return
+    }
+
     switch (e.key) {
       case 'Escape':
         handleClose()
@@ -84,14 +86,12 @@ export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockBod
   }
 
   function handleClickOutside(e: Event) {
-    if (ref.current && !ref.current.contains(e.target as HTMLElement) && state) {
+    if (ref.current && !ref.current.contains(e.target as HTMLElement) && state && lightDismiss) {
       handleClose()
     }
   }
 
-  if (lockBodyWhenOpen) {
-    //useBodyLock({ state })
-  }
+  useLock({ state, isEnabled: lockWhenOpen })
 
   useEffect(() => {
     document.addEventListener('click', handleClickOutside)
@@ -99,6 +99,7 @@ export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockBod
     return () => {
       document.removeEventListener('click', handleClickOutside)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state])
 
   useEffect(() => {
@@ -107,6 +108,7 @@ export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockBod
     return () => {
       document.removeEventListener('keydown', handleKeys)
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [state])
 
   return { handleOpen, handleClose }

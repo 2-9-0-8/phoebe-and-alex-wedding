@@ -48,32 +48,6 @@ export default function Nav() {
     postOpenFn: () => closeNavRef.current?.focus(),
   })
 
-  function handleKeys(e: KeyboardEvent) {
-    switch (e.key) {
-      case 'Escape':
-        setOpen(false)
-        break
-    }
-  }
-
-  useEffect(() => {
-    if (query && open) setOpen(false)
-  }, [query])
-
-  useEffect(() => {
-    if (open) setOpen(false)
-  }, [pathname])
-
-  useEffect(() => {
-    window.addEventListener('keydown', handleKeys)
-
-    return () => {
-      window.removeEventListener('keydown', handleKeys)
-    }
-  }, [open])
-
-  useBodyLock(open)
-
   return (
     <nav>
       <button ref={openNavRef} className={[styles.toggle, styles['open-nav']].join(' ')} onClick={handleOpen} aria-expanded={open}>

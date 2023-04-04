@@ -129,7 +129,7 @@ export default function ResponseForm() {
                 <div className={styles['response__section']}>
                   <label>
                     <span className={styles['response__label']}>Name(s)</span>
-                    <Field name="from_name" type="text" />
+                    <Field name="from_name" type="text" tabIndex="0" />
                   </label>
                   <ErrorMessage component="div" className={styles['response__error']} name="from_name" />
                 </div>
@@ -137,7 +137,7 @@ export default function ResponseForm() {
                 <div className={styles['response__section']}>
                   <label>
                     <span className={styles['response__label']}>Email</span>
-                    <Field name="from_email" type="email" />
+                    <Field name="from_email" type="email" tabIndex="0" />
                   </label>
                   <ErrorMessage component="div" className={styles['response__error']} name="from_email" />
                 </div>
@@ -145,7 +145,7 @@ export default function ResponseForm() {
                 <div className={styles['response__section']}>
                   <label>
                     <span className={styles['response__label']}>RSVP</span>
-                    <Field name="rsvp" as="select">
+                    <Field name="rsvp" as="select" tabIndex="0">
                       <option value="" disabled>
                         Please select an option
                       </option>
@@ -168,17 +168,35 @@ export default function ResponseForm() {
                   <div className={styles['response__group']}>
                     <label>
                       Meat
-                      <Field name="food" type="radio" value="Meat" disabled={values.rsvp !== 'Attending'} />
+                      <Field
+                        name="food"
+                        type="radio"
+                        value="Meat"
+                        disabled={values.rsvp !== 'Attending'}
+                        tabIndex="0"
+                      />
                     </label>
 
                     <label>
                       Vegetarian
-                      <Field name="food" type="radio" value="Vegetarian" disabled={values.rsvp !== 'Attending'} />
+                      <Field
+                        name="food"
+                        type="radio"
+                        value="Vegetarian"
+                        disabled={values.rsvp !== 'Attending'}
+                        tabIndex="0"
+                      />
                     </label>
 
                     <label>
                       Vegan
-                      <Field name="food" type="radio" value="Vegan" disabled={values.rsvp !== 'Attending'} />
+                      <Field
+                        name="food"
+                        type="radio"
+                        value="Vegan"
+                        disabled={values.rsvp !== 'Attending'}
+                        tabIndex="0"
+                      />
                     </label>
                   </div>
                 </div>
@@ -201,6 +219,7 @@ export default function ResponseForm() {
                         type="radio"
                         value="No"
                         disabled={values.rsvp !== 'Attending'}
+                        tabIndex="0"
                       />
                     </label>
 
@@ -211,6 +230,7 @@ export default function ResponseForm() {
                         type="radio"
                         value="Yes"
                         disabled={values.rsvp !== 'Attending'}
+                        tabIndex="0"
                       />
                     </label>
                   </div>
@@ -226,6 +246,7 @@ export default function ResponseForm() {
                       name="dietary_requirement_specifics"
                       type="text"
                       disabled={values.dietary_requirements !== 'Yes'}
+                      tabIndex="0"
                     />
                   </label>
                   <ErrorMessage
