@@ -14,7 +14,14 @@ type ModalProps = {
 
 const selectorString = selectors.join(',')
 
-export default function useModal({ ref, _state, postOpenFn, postCloseFn, lockWhenOpen = true, lightDismiss = true }: ModalProps) {
+export default function useModal({
+  ref,
+  _state,
+  postOpenFn,
+  postCloseFn,
+  lockWhenOpen = true,
+  lightDismiss = true,
+}: ModalProps) {
   const [state, setState] = _state
 
   function closeFn() {

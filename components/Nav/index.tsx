@@ -4,9 +4,8 @@ import { routes } from './routes'
 import styles from '@styles/modules/Nav.module.css'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import useMediaQuery from '@utils/useMediaQuery'
-import useBodyLock from '@utils/useBodyLock'
 import useModal from '@utils/useModal'
 
 function OpenIcon() {
