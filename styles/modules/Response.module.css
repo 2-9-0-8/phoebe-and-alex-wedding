@@ -10,7 +10,7 @@
     padding: var(--flow-space) 0 0 0;
   }
 
-  & input {
+  & :is(input, textarea) {
     accent-color: var(--greyish-brown-dark);
 
     &[disabled] {
@@ -26,7 +26,13 @@
     }
   }
 
-  & :where(input[type=text], input[type=email]) {
+  & textarea {
+    inline-size: 100%;
+    min-block-size: 12rem;
+    resize: vertical;
+  }
+
+  & :where(input[type=text], input[type=email], textarea) {
     background-color: var(--lightest-taupe);
     border: 1px solid var(--taupe);
     font-family: var(--font-sans);

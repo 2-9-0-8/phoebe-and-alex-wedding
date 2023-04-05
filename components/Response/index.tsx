@@ -14,6 +14,7 @@ const initialValues = {
   food: '',
   dietary_requirements: '',
   dietary_requirement_specifics: '',
+  misc_requirements: '',
 }
 
 const initialStatus = {
@@ -38,6 +39,7 @@ const ResponseSchema = Yup.object().shape({
     is: 'Yes',
     then: Yup.string().required('* Dietary requirement specifics field is required'),
   }),
+  misc_requirements: Yup.string(),
 })
 
 type StatusType = typeof initialStatus
@@ -253,6 +255,25 @@ export default function ResponseForm() {
                     component="div"
                     className={styles['response__error']}
                     name="dietary_requirement_specifics"
+                  />
+                </div>
+
+                <div
+                  className={styles['response__section']}
+                  data-state={values.rsvp !== 'Attending' ? 'has-disabled' : null}>
+                  <label>
+                    <span className={styles['response__label']}>If you require parking, would like to camp, or have any other requirements, please list below</span>
+                    <Field
+                      name="misc_requirements"
+                      as="textarea"
+                      disabled={values.rsvp !== 'Attending'}
+                      tabIndex="0"
+                    />
+                  </label>
+                  <ErrorMessage
+                    component="div"
+                    className={styles['response__error']}
+                    name="misc_requirements"
                   />
                 </div>
 
