@@ -26,6 +26,26 @@ const d = [
     name: 'Bath City Centre Hotel',
     url: 'https://www.premierinn.com/gb/en/hotels/england/somerset/bath/bath-city-centre.html',
   },
+  {
+    name: 'George Inn (Lacock)',
+    url: 'https://www.georgeinnlacock.co.uk',
+  },
+  {
+    name: 'The Suite at Jaggards Hawthorne',
+    url: 'http://the-suite-at-jaggards.derbyshire-uk.com/en/'
+  },
+  {
+    name: 'The Northey Arms',
+    url: 'https://butcombe.com/the-northey-arms-wiltshire/'
+  },
+  { 
+    name: 'Lansdown Grove',
+    url: 'https://www.lansdowngrove.co.uk'
+  },
+  {
+    name: 'Premier Inn Bath City Centre',
+    url: 'https://www.premierinn.com/gb/en/hotels/england/somerset/bath/bath-city-centre.html'
+  }
 ]
 
 export default function Accomodation() {
